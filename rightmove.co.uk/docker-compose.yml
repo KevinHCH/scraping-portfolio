@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./scrapy.cfg:/app/scrapy.cfg
+      - ./londonhousing:/app/londonhousing
+    # command: sh -c "scrapy crawl housing -O /app/data/output.json -s LOG_FILE=/app/data/spider.log"
+    environment:
+      - SCRAPY_SETTINGS_MODULE=londonhousing.settings

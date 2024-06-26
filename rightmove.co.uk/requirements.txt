@@ -1,0 +1,4 @@
+flatten_json==0.1.14
+itemadapter==0.9.0
+rich==13.7.1
+Scrapy==2.11.2
